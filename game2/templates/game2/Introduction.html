@@ -1,17 +1,17 @@
 {% extends "global/Base.html" %}
-{% load staticfiles otree_tags %}
+{% load staticfiles otree_tags i18n %}
 
 {% block title %}
-    Introduction
+    {% trans "Game 2" %}
 {% endblock %}
 
 {% block content %}
 
-    {% include 'matching_pennies/Instructions.html' %}
-
-    <p>
-       On the next page, you will have to answer one question to make sure you understand the instructions correctly.
-    </p>
+    <ul class="lead">
+        <li>{% trans "You will begin the game with" %} <span class="text-info">{{12|c}}</span>.{% trans "- and you will play with units of" %} <span class="text-info">{{0.20|c}}</span>-</li>
+        <li>{% trans "You and the other participant will decide how you want to distribute this sum." %}</li>
+        <li>{% trans "You will be allowed to put this money into a private account or a project." %}</li>
+    </ul>
 
     {% next_button %}
 

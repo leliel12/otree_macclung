@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Comprehension Question 1" %}
+{% endblock %}
+
+{% block content %}
+
+<p>{% trans "Before making your decision, answer the following questions to ensure you understand the reward schedule. The program will let you start the game only after you have answered the questions correctly." %}</p>
+
+<p class="lead">{% trans "If everyone starts with CHF 12 and nobody contributes to the project, what is your total reward? And what is the other participant’s total reward?" %}</p>
+
+<div class="lead">
+    {% formfield player.comprehension_1 with label="" %}
+</div>
+
+    {% next_button %}
+
+{% endblock %}

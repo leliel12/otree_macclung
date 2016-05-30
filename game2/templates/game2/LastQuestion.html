@@ -1,0 +1,18 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Last Question!" %}
+{% endblock %}
+
+{% block content %}
+
+<p class="lead">{% trans "In the game, if you want to maximize your reward at each turn, does the amount you put in the project depend on the amount the other participant puts into the project?" %}</p>
+
+<div class="lead">
+    {% formfield player.last_question with label="" %}
+</div>
+
+    {% next_button %}
+
+{% endblock %}

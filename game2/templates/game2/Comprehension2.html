@@ -1,0 +1,18 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Comprehension Question 2" %}
+{% endblock %}
+
+{% block content %}
+
+<p class="lead">{% trans "If you and the other participant each contribute CHF 4 to the project, what is your total reward? And what the other participant’s total reward?" %}</p>
+
+<div class="lead">
+    {% formfield player.comprehension_2 with label="" %}
+</div>
+
+    {% next_button %}
+
+{% endblock %}

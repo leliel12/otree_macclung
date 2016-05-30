@@ -1,0 +1,31 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Project" %}
+{% endblock %}
+
+{% block content %}
+
+<p class="lead">{% trans "Both you and the other participant can put money into the project. At the end of the game the total amount in the project will be multiplied by 1.6 and then divided out by two." %}</p>
+
+<h3>{% trans "Example" %}</h3>
+
+<ul  class="lead">
+    <li>
+        {% trans "If you and the other participant both put" %}
+        <span class="text-info">{{6|c}}</span>.- {% trans "in the project, meaning" %}
+        <span class="text-info">{{12|c}}</span>.- {% trans "in total in the project at the end of the game, you will each earn" %}
+        <span class="text-info">{{9.60|c}}</span>.- <code>((12 x 1.6) /2)</code>.
+    </li>
+    <li>
+        {% trans "On the other hand, if you put" %}
+        <span class="text-info">{{6|c}}</span>.- {% trans "in the project and the other participant puts nothing, meaning" %}
+        <span class="text-info">{{6|c}}</span>.- {% trans "in total in the project at the end of the game, you will each earn" %}
+        <span class="text-info">{{4.8|c}}</span>.- <code>((6 x 1.6) /2).</code>
+    </li>
+</ul>
+
+    {% next_button %}
+
+{% endblock %}

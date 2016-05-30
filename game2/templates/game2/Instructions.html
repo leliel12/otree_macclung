@@ -1,0 +1,42 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Instructions" %}
+{% endblock %}
+
+{% block content %}
+<style>
+kbd {
+    border-style: solid;
+    border-radius: 6px;
+    padding: 3px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px;
+}
+
+</style>
+
+<p class="lead">{% trans "The game will begin soon." %}</p>
+
+<p class="lead">
+    {% trans "Each time you click on the" %}
+    <kbd>{% trans "Space Bar" %}</kbd>
+    {% trans "you will transfer" %}
+    <span class="text-info">{{Constants.click_transfer_text}}</span>
+    {% trans "to the project." %}
+</p>
+
+<p class="lead">
+    {% trans "Each unit of" %} <span class="text-info">{{Constants.click_transfer_text}}</span>
+    {% trans "that is put in the project (either by you or the other participant) will be visible on the screen." %}
+</p>
+ 
+<p class="lead">{% trans "Your contribution will be shown in blue, while the other participant’s contribution will be shown in red." %}</p>
+
+<p class="lead">{% trans "You will have" %} <span class="text-info">{% trans "3 minutes" %}</span> {% trans "for this game." %}</p>
+
+
+    {% next_button %}
+
+{% endblock %}

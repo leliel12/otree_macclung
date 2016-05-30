@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Private Account" %}
+{% endblock %}
+
+{% block content %}
+
+<p class="lead">{% trans "You are the only person who may put money in your private account, and any money you put into it is for you alone." %}</p>
+
+<h3>{% trans "Example" %}</h3>
+
+<ul  class="lead">
+    <li>{% trans "If you leave the entire sum in your private account you will earn in total" %} <span class="text-info">{{12|c}}</span>.-</li>
+</ul>
+
+    {% next_button %}
+
+{% endblock %}

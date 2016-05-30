@@ -1,0 +1,21 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags i18n %}
+
+{% block title %}
+    {% trans "Total Reward" %}
+{% endblock %}
+
+{% block content %}
+
+<p class="lead">{% trans "Your total reward will be the sum of the private account plus the project at the end of the game:" %}</p>
+
+
+<p class="lead text-center">
+    <code>{% trans "TOTAL REWARD = private account + project*" %}</code>
+</p>
+
+<p>{% trans "* (total in project and end of game x 1.6) / 2" %}</p>
+
+    {% next_button %}
+
+{% endblock %}
